@@ -3,9 +3,21 @@ name = "yoga-sys"
 version = "0.1.0"
 authors = ["Nemikolh"]
 build = "build.rs"
+license = "BSD-3-Clause"
+description = "Raw rust bindings for yoga (facebook flex layout cross-platform engine)"
+documentation = "https://docs.rs/yoga-sys"
+homepage = "https://github.com/Nemikolh/yoga"
+repository = "https://github.com/Nemikolh/yoga"
+readme = "README.md"
+keywords = ["ffi", "yoga", "flex", "layout"]
+categories = ["external-ffi-bindings", "rendering::engine"]
 
 [dependencies]
 libc = "0.2"
 
 [build-dependencies]
 gcc = "0.3"
+skeptic = "0.9"
+
+[dev-dependencies]
+skeptic = "0.9"
