@@ -592,6 +592,9 @@ extern "C" {
     pub fn YGNodeLayoutGetDirection(node: YGNodeRef) -> YGDirection;
 }
 extern "C" {
+    pub fn YGNodeLayoutGetHadOverflow(node: YGNodeRef) -> bool;
+}
+extern "C" {
     pub fn YGNodeLayoutGetMargin(node: YGNodeRef, edge: YGEdge) -> f32;
 }
 extern "C" {

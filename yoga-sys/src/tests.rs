@@ -63,5 +63,6 @@ fn basic_ygnode_test() {
         assert_eq!(width, 360.);
         assert_eq!(height, 25.);
 
+        YGNodeFreeRecursive(root);
     }
 }

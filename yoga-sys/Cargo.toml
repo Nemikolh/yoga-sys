@@ -1,6 +1,6 @@
 [package]
 name = "yoga-sys"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Nemikolh"]
 build = "build.rs"
 license = "BSD-3-Clause"
@@ -16,8 +16,8 @@ categories = ["external-ffi-bindings", "rendering::engine"]
 libc = "0.2"
 
 [build-dependencies]
-gcc = "0.3"
-skeptic = "0.9"
+cc = "1.0"
+skeptic = "0.13"
 
 [dev-dependencies]
-skeptic = "0.9"
+skeptic = "0.13"

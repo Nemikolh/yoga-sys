@@ -49,6 +49,8 @@ fn main() {
 
         YGNodeInsertChild(root, image, 0);
         YGNodeInsertChild(root, text, 1);
+
+        YGNodeFreeRecursive(root);
     }
 }
 ```
