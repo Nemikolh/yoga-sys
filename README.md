@@ -11,7 +11,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-yoga-sys = "0.1.0"
+yoga-sys = "0.2.2"
 ```
 
 In your `main.rs` or `lib.rs` file add:

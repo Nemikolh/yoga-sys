@@ -1,6 +1,0 @@
-[package]
-name = "yoga"
-version = "0.1.0"
-authors = ["Nemikolh"]
-
-[dependencies]
