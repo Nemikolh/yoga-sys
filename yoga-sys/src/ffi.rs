@@ -253,6 +253,12 @@ pub type YGLogger =
                                                    *const ::std::os::raw::c_char,
                                                args: *mut __va_list_tag)
                               -> ::std::os::raw::c_int>;
+pub type YGNodeClonedFunc =
+    ::std::option::Option<unsafe extern "C" fn(oldNode: YGNodeRef,
+                                               newNode: YGNodeRef,
+                                               parent: YGNodeRef,
+                                               childIndex:
+                                                   ::std::os::raw::c_int)>;
 pub type YGMalloc =
     ::std::option::Option<unsafe extern "C" fn(size: usize)
                               -> *mut ::std::os::raw::c_void>;
@@ -274,6 +280,9 @@ extern "C" {
     pub fn YGNodeNewWithConfig(config: YGConfigRef) -> YGNodeRef;
 }
 extern "C" {
+    pub fn YGNodeClone(node: YGNodeRef) -> YGNodeRef;
+}
+extern "C" {
     pub fn YGNodeFree(node: YGNodeRef);
 }
 extern "C" {
@@ -290,6 +299,9 @@ extern "C" {
 }
 extern "C" {
     pub fn YGNodeRemoveChild(node: YGNodeRef, child: YGNodeRef);
+}
+extern "C" {
+    pub fn YGNodeRemoveAllChildren(node: YGNodeRef);
 }
 extern "C" {
     pub fn YGNodeGetChild(node: YGNodeRef, index: u32) -> YGNodeRef;
@@ -665,6 +677,10 @@ extern "C" {
     pub fn YGConfigGetUseWebDefaults(config: YGConfigRef) -> bool;
 }
 extern "C" {
+    pub fn YGConfigSetNodeClonedFunc(config: YGConfigRef,
+                                     callback: YGNodeClonedFunc);
+}
+extern "C" {
     pub fn YGConfigGetDefault() -> YGConfigRef;
 }
 extern "C" {
@@ -702,6 +718,13 @@ extern "C" {
                             index: u32);
 }
 extern "C" {
+    pub fn YGNodeListReplace(list: YGNodeListRef, index: u32,
+                             newNode: YGNodeRef);
+}
+extern "C" {
+    pub fn YGNodeListRemoveAll(list: YGNodeListRef);
+}
+extern "C" {
     pub fn YGNodeListRemove(list: YGNodeListRef, index: u32) -> YGNodeRef;
 }
 extern "C" {
@@ -710,6 +733,9 @@ extern "C" {
 }
 extern "C" {
     pub fn YGNodeListGet(list: YGNodeListRef, index: u32) -> YGNodeRef;
+}
+extern "C" {
+    pub fn YGNodeListClone(list: YGNodeListRef) -> YGNodeListRef;
 }
 #[repr(C)]
 #[derive(Debug, Copy)]

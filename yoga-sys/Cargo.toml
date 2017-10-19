@@ -1,6 +1,6 @@
 [package]
 name = "yoga-sys"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Nemikolh"]
 build = "build.rs"
 license = "BSD-3-Clause"
