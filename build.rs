@@ -8,7 +8,8 @@ fn main() {
         .file("c/YGNodeList.cpp")
         .file("c/Yoga.cpp")
         .cpp(true)
-        .flag("-std=c++14")
+        .flag_if_supported("-std=c++14")
+        .flag_if_supported("/std:c++14")
         .flag_if_supported("-Wno-unused-parameter")
         .compile("libyoga.a");
 }
