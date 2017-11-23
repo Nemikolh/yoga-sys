@@ -129,10 +129,10 @@ typedef struct YGNode {
 } YGNode;
 
 #define YG_UNDEFINED_VALUES \
-  { .value = YGUndefined, .unit = YGUnitUndefined }
+  {  YGUndefined, YGUnitUndefined }
 
 #define YG_AUTO_VALUES \
-  { .value = YGUndefined, .unit = YGUnitAuto }
+  {  YGUndefined, YGUnitAuto }
 
 #define YG_DEFAULT_EDGE_VALUES_UNIT                                                   \
   {                                                                                   \
@@ -157,72 +157,72 @@ static const float kDefaultFlexShrink = 0.0f;
 static const float kWebDefaultFlexShrink = 1.0f;
 
 static const YGStyle gYGNodeStyleDefaults = {
-    .direction = YGDirectionInherit,
-    .flexDirection = YGFlexDirectionColumn,
-    .justifyContent = YGJustifyFlexStart,
-    .alignContent = YGAlignFlexStart,
-    .alignItems = YGAlignStretch,
-    .alignSelf = YGAlignAuto,
-    .positionType = YGPositionTypeRelative,
-    .flexWrap = YGWrapNoWrap,
-    .overflow = YGOverflowVisible,
-    .display = YGDisplayFlex,
-    .flex = YGUndefined,
-    .flexGrow = YGUndefined,
-    .flexShrink = YGUndefined,
-    .flexBasis = YG_AUTO_VALUES,
-    .margin = YG_DEFAULT_EDGE_VALUES_UNIT,
-    .position = YG_DEFAULT_EDGE_VALUES_UNIT,
-    .padding = YG_DEFAULT_EDGE_VALUES_UNIT,
-    .border = YG_DEFAULT_EDGE_VALUES_UNIT,
-    .dimensions = YG_DEFAULT_DIMENSION_VALUES_AUTO_UNIT,
-    .minDimensions = YG_DEFAULT_DIMENSION_VALUES_UNIT,
-    .maxDimensions = YG_DEFAULT_DIMENSION_VALUES_UNIT,
-    .aspectRatio = YGUndefined,
+     YGDirectionInherit,
+     YGFlexDirectionColumn,
+     YGJustifyFlexStart,
+     YGAlignFlexStart,
+     YGAlignStretch,
+     YGAlignAuto,
+     YGPositionTypeRelative,
+     YGWrapNoWrap,
+     YGOverflowVisible,
+     YGDisplayFlex,
+     YGUndefined,
+     YGUndefined,
+     YGUndefined,
+     YG_AUTO_VALUES,
+     YG_DEFAULT_EDGE_VALUES_UNIT,
+     YG_DEFAULT_EDGE_VALUES_UNIT,
+     YG_DEFAULT_EDGE_VALUES_UNIT,
+     YG_DEFAULT_EDGE_VALUES_UNIT,
+     YG_DEFAULT_DIMENSION_VALUES_AUTO_UNIT,
+     YG_DEFAULT_DIMENSION_VALUES_UNIT,
+     YG_DEFAULT_DIMENSION_VALUES_UNIT,
+     YGUndefined,
 };
 
 static const YGLayout gYGNodeLayoutDefaults = {
-    .position = {},
-    .dimensions = YG_DEFAULT_DIMENSION_VALUES,
-    .margin = {},
-    .border = {},
-    .padding = {},
-    .direction = YGDirectionInherit,
-    .computedFlexBasisGeneration = 0,
-    .computedFlexBasis = YGUndefined,
-    .hadOverflow = false,
-    .generationCount = 0,
-    .lastParentDirection = (YGDirection)-1,
-    .nextCachedMeasurementsIndex = 0,
-    .cachedMeasurements = {},
-    .measuredDimensions = YG_DEFAULT_DIMENSION_VALUES,
+     {},
+     YG_DEFAULT_DIMENSION_VALUES,
+     {},
+     {},
+     {},
+     YGDirectionInherit,
+     0,
+     YGUndefined,
+     false,
+     0,
+     (YGDirection)-1,
+     0,
+     {},
+     YG_DEFAULT_DIMENSION_VALUES,
     .cachedLayout =
         {
-            .availableWidth = 0,
-            .availableHeight = 0,
-            .widthMeasureMode = (YGMeasureMode)-1,
-            .heightMeasureMode = (YGMeasureMode)-1,
-            .computedWidth = -1,
-            .computedHeight = -1,
+             0,
+             0,
+             (YGMeasureMode)-1,
+             (YGMeasureMode)-1,
+             -1,
+             -1,
         },
 };
 
 static const YGNode gYGNodeDefaults = {
-    .style = gYGNodeStyleDefaults,
-    .layout = gYGNodeLayoutDefaults,
-    .lineIndex = 0,
-    .parent = nullptr,
-    .children = nullptr,
-    .nextChild = nullptr,
-    .measure = nullptr,
-    .baseline = nullptr,
-    .print = nullptr,
-    .config = nullptr,
-    .context = nullptr,
-    .isDirty = false,
-    .hasNewLayout = true,
-    .nodeType = YGNodeTypeDefault,
-    .resolvedDimensions = {[YGDimensionWidth] = &YGValueUndefined,
+     gYGNodeStyleDefaults,
+     gYGNodeLayoutDefaults,
+     0,
+     nullptr,
+     nullptr,
+     nullptr,
+     nullptr,
+     nullptr,
+     nullptr,
+     nullptr,
+     nullptr,
+     false,
+     true,
+     YGNodeTypeDefault,
+     {[YGDimensionWidth] = &YGValueUndefined,
                            [YGDimensionHeight] = &YGValueUndefined},
 };
 
@@ -245,21 +245,21 @@ static YGConfig gYGConfigDefaults = {
         {
             [YGExperimentalFeatureWebFlexBasis] = false,
         },
-    .useWebDefaults = false,
-    .useLegacyStretchBehaviour = false,
-    .pointScaleFactor = 1.0f,
+     false,
+     false,
+     1.0f,
 #ifdef ANDROID
-    .logger = &YGAndroidLog,
+     &YGAndroidLog,
 #else
-    .logger = &YGDefaultLog,
+     &YGDefaultLog,
 #endif
-    .cloneNodeCallback = nullptr,
-    .context = nullptr,
+     nullptr,
+     nullptr,
 };
 
 static void YGNodeMarkDirtyInternal(const YGNodeRef node);
 
-static YGValue YGValueZero = {.value = 0, .unit = YGUnitPoint};
+static YGValue YGValueZero = { 0,  YGUnitPoint};
 
 #ifdef ANDROID
 #include <android/log.h>
