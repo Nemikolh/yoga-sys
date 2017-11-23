@@ -18,10 +18,12 @@ extern "C" {
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum YGDimension { YGDimensionWidth = 0, YGDimensionHeight = 1, }
+pub enum YGDimension {
+    YGDimensionWidth = 0,
+    YGDimensionHeight = 1,
+}
 extern "C" {
-    pub fn YGDimensionToString(value: YGDimension)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGDimensionToString(value: YGDimension) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -31,15 +33,16 @@ pub enum YGDirection {
     YGDirectionRTL = 2,
 }
 extern "C" {
-    pub fn YGDirectionToString(value: YGDirection)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGDirectionToString(value: YGDirection) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum YGDisplay { YGDisplayFlex = 0, YGDisplayNone = 1, }
+pub enum YGDisplay {
+    YGDisplayFlex = 0,
+    YGDisplayNone = 1,
+}
 extern "C" {
-    pub fn YGDisplayToString(value: YGDisplay)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGDisplayToString(value: YGDisplay) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -59,10 +62,13 @@ extern "C" {
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum YGExperimentalFeature { YGExperimentalFeatureWebFlexBasis = 0, }
+pub enum YGExperimentalFeature {
+    YGExperimentalFeatureWebFlexBasis = 0,
+}
 extern "C" {
-    pub fn YGExperimentalFeatureToString(value: YGExperimentalFeature)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGExperimentalFeatureToString(
+        value: YGExperimentalFeature,
+    ) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -73,8 +79,7 @@ pub enum YGFlexDirection {
     YGFlexDirectionRowReverse = 3,
 }
 extern "C" {
-    pub fn YGFlexDirectionToString(value: YGFlexDirection)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGFlexDirectionToString(value: YGFlexDirection) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -86,8 +91,7 @@ pub enum YGJustify {
     YGJustifySpaceAround = 4,
 }
 extern "C" {
-    pub fn YGJustifyToString(value: YGJustify)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGJustifyToString(value: YGJustify) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -100,8 +104,7 @@ pub enum YGLogLevel {
     YGLogLevelFatal = 5,
 }
 extern "C" {
-    pub fn YGLogLevelToString(value: YGLogLevel)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGLogLevelToString(value: YGLogLevel) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -111,15 +114,16 @@ pub enum YGMeasureMode {
     YGMeasureModeAtMost = 2,
 }
 extern "C" {
-    pub fn YGMeasureModeToString(value: YGMeasureMode)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGMeasureModeToString(value: YGMeasureMode) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum YGNodeType { YGNodeTypeDefault = 0, YGNodeTypeText = 1, }
+pub enum YGNodeType {
+    YGNodeTypeDefault = 0,
+    YGNodeTypeText = 1,
+}
 extern "C" {
-    pub fn YGNodeTypeToString(value: YGNodeType)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGNodeTypeToString(value: YGNodeType) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -129,8 +133,7 @@ pub enum YGOverflow {
     YGOverflowScroll = 2,
 }
 extern "C" {
-    pub fn YGOverflowToString(value: YGOverflow)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGOverflowToString(value: YGOverflow) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -139,8 +142,7 @@ pub enum YGPositionType {
     YGPositionTypeAbsolute = 1,
 }
 extern "C" {
-    pub fn YGPositionTypeToString(value: YGPositionType)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGPositionTypeToString(value: YGPositionType) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -150,8 +152,7 @@ pub enum YGPrintOptions {
     YGPrintOptionsChildren = 4,
 }
 extern "C" {
-    pub fn YGPrintOptionsToString(value: YGPrintOptions)
-     -> *const ::std::os::raw::c_char;
+    pub fn YGPrintOptionsToString(value: YGPrintOptions) -> *const ::std::os::raw::c_char;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -166,61 +167,91 @@ extern "C" {
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum YGWrap { YGWrapNoWrap = 0, YGWrapWrap = 1, YGWrapWrapReverse = 2, }
+pub enum YGWrap {
+    YGWrapNoWrap = 0,
+    YGWrapWrap = 1,
+    YGWrapWrapReverse = 2,
+}
 extern "C" {
     pub fn YGWrapToString(value: YGWrap) -> *const ::std::os::raw::c_char;
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct YGSize {
     pub width: f32,
     pub height: f32,
 }
 #[test]
 fn bindgen_test_layout_YGSize() {
-    assert_eq!(::std::mem::size_of::<YGSize>() , 8usize , concat ! (
-               "Size of: " , stringify ! ( YGSize ) ));
-    assert_eq! (::std::mem::align_of::<YGSize>() , 4usize , concat ! (
-                "Alignment of " , stringify ! ( YGSize ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const YGSize ) ) . width as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( YGSize ) , "::" ,
-                stringify ! ( width ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const YGSize ) ) . height as * const _ as usize
-                } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( YGSize ) , "::" ,
-                stringify ! ( height ) ));
-}
-impl Clone for YGSize {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<YGSize>(),
+        8usize,
+        concat!("Size of: ", stringify!(YGSize))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<YGSize>(),
+        4usize,
+        concat!("Alignment of ", stringify!(YGSize))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const YGSize)).width as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(YGSize),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const YGSize)).height as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(YGSize),
+            "::",
+            stringify!(height)
+        )
+    );
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct YGValue {
     pub value: f32,
     pub unit: YGUnit,
 }
 #[test]
 fn bindgen_test_layout_YGValue() {
-    assert_eq!(::std::mem::size_of::<YGValue>() , 8usize , concat ! (
-               "Size of: " , stringify ! ( YGValue ) ));
-    assert_eq! (::std::mem::align_of::<YGValue>() , 4usize , concat ! (
-                "Alignment of " , stringify ! ( YGValue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const YGValue ) ) . value as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( YGValue ) , "::" ,
-                stringify ! ( value ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const YGValue ) ) . unit as * const _ as usize
-                } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( YGValue ) , "::" ,
-                stringify ! ( unit ) ));
-}
-impl Clone for YGValue {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<YGValue>(),
+        8usize,
+        concat!("Size of: ", stringify!(YGValue))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<YGValue>(),
+        4usize,
+        concat!("Alignment of ", stringify!(YGValue))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const YGValue)).value as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(YGValue),
+            "::",
+            stringify!(value)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const YGValue)).unit as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(YGValue),
+            "::",
+            stringify!(unit)
+        )
+    );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -234,45 +265,37 @@ pub struct YGNode {
     _unused: [u8; 0],
 }
 pub type YGNodeRef = *mut YGNode;
-pub type YGMeasureFunc =
-    ::std::option::Option<unsafe extern "C" fn(node: YGNodeRef, width: f32,
-                                               widthMode: YGMeasureMode,
-                                               height: f32,
-                                               heightMode: YGMeasureMode)
-                              -> YGSize>;
-pub type YGBaselineFunc =
-    ::std::option::Option<unsafe extern "C" fn(node: YGNodeRef, width: f32,
-                                               height: f32) -> f32>;
-pub type YGPrintFunc =
-    ::std::option::Option<unsafe extern "C" fn(node: YGNodeRef)>;
+pub type YGMeasureFunc = ::std::option::Option<
+    unsafe extern "C" fn(node: YGNodeRef,
+                         width: f32,
+                         widthMode: YGMeasureMode,
+                         height: f32,
+                         heightMode: YGMeasureMode)
+                         -> YGSize,
+>;
+pub type YGBaselineFunc = ::std::option::Option<
+    unsafe extern "C" fn(node: YGNodeRef,
+                         width: f32,
+                         height: f32)
+                         -> f32,
+>;
+pub type YGPrintFunc = ::std::option::Option<unsafe extern "C" fn(node: YGNodeRef)>;
 pub type YGLogger =
-    ::std::option::Option<unsafe extern "C" fn(config: YGConfigRef,
-                                               node: YGNodeRef,
-                                               level: YGLogLevel,
-                                               format:
-                                                   *const ::std::os::raw::c_char,
-                                               args: *mut __va_list_tag)
-                              -> ::std::os::raw::c_int>;
+    ::std::option::Option<
+        unsafe extern "C" fn(config: YGConfigRef,
+                             node: YGNodeRef,
+                             level: YGLogLevel,
+                             format: *const ::std::os::raw::c_char,
+                             args: *mut __va_list_tag)
+                             -> ::std::os::raw::c_int,
+    >;
 pub type YGNodeClonedFunc =
-    ::std::option::Option<unsafe extern "C" fn(oldNode: YGNodeRef,
-                                               newNode: YGNodeRef,
-                                               parent: YGNodeRef,
-                                               childIndex:
-                                                   ::std::os::raw::c_int)>;
-pub type YGMalloc =
-    ::std::option::Option<unsafe extern "C" fn(size: usize)
-                              -> *mut ::std::os::raw::c_void>;
-pub type YGCalloc =
-    ::std::option::Option<unsafe extern "C" fn(count: usize, size: usize)
-                              -> *mut ::std::os::raw::c_void>;
-pub type YGRealloc =
-    ::std::option::Option<unsafe extern "C" fn(ptr:
-                                                   *mut ::std::os::raw::c_void,
-                                               size: usize)
-                              -> *mut ::std::os::raw::c_void>;
-pub type YGFree =
-    ::std::option::Option<unsafe extern "C" fn(ptr:
-                                                   *mut ::std::os::raw::c_void)>;
+    ::std::option::Option<
+        unsafe extern "C" fn(oldNode: YGNodeRef,
+                             newNode: YGNodeRef,
+                             parent: YGNodeRef,
+                             childIndex: ::std::os::raw::c_int),
+    >;
 extern "C" {
     pub fn YGNodeNew() -> YGNodeRef;
 }
@@ -313,9 +336,12 @@ extern "C" {
     pub fn YGNodeGetChildCount(node: YGNodeRef) -> u32;
 }
 extern "C" {
-    pub fn YGNodeCalculateLayout(node: YGNodeRef, availableWidth: f32,
-                                 availableHeight: f32,
-                                 parentDirection: YGDirection);
+    pub fn YGNodeCalculateLayout(
+        node: YGNodeRef,
+        availableWidth: f32,
+        availableHeight: f32,
+        parentDirection: YGDirection,
+    );
 }
 extern "C" {
     pub fn YGNodeMarkDirty(node: YGNodeRef);
@@ -330,24 +356,27 @@ extern "C" {
     pub fn YGFloatIsUndefined(value: f32) -> bool;
 }
 extern "C" {
-    pub fn YGNodeCanUseCachedMeasurement(widthMode: YGMeasureMode, width: f32,
-                                         heightMode: YGMeasureMode,
-                                         height: f32,
-                                         lastWidthMode: YGMeasureMode,
-                                         lastWidth: f32,
-                                         lastHeightMode: YGMeasureMode,
-                                         lastHeight: f32,
-                                         lastComputedWidth: f32,
-                                         lastComputedHeight: f32,
-                                         marginRow: f32, marginColumn: f32,
-                                         config: YGConfigRef) -> bool;
+    pub fn YGNodeCanUseCachedMeasurement(
+        widthMode: YGMeasureMode,
+        width: f32,
+        heightMode: YGMeasureMode,
+        height: f32,
+        lastWidthMode: YGMeasureMode,
+        lastWidth: f32,
+        lastHeightMode: YGMeasureMode,
+        lastHeight: f32,
+        lastComputedWidth: f32,
+        lastComputedHeight: f32,
+        marginRow: f32,
+        marginColumn: f32,
+        config: YGConfigRef,
+    ) -> bool;
 }
 extern "C" {
     pub fn YGNodeCopyStyle(dstNode: YGNodeRef, srcNode: YGNodeRef);
 }
 extern "C" {
-    pub fn YGNodeSetContext(node: YGNodeRef,
-                            context: *mut ::std::os::raw::c_void);
+    pub fn YGNodeSetContext(node: YGNodeRef, context: *mut ::std::os::raw::c_void);
 }
 extern "C" {
     pub fn YGNodeGetContext(node: YGNodeRef) -> *mut ::std::os::raw::c_void;
@@ -359,8 +388,7 @@ extern "C" {
     pub fn YGNodeGetMeasureFunc(node: YGNodeRef) -> YGMeasureFunc;
 }
 extern "C" {
-    pub fn YGNodeSetBaselineFunc(node: YGNodeRef,
-                                 baselineFunc: YGBaselineFunc);
+    pub fn YGNodeSetBaselineFunc(node: YGNodeRef, baselineFunc: YGBaselineFunc);
 }
 extern "C" {
     pub fn YGNodeGetBaselineFunc(node: YGNodeRef) -> YGBaselineFunc;
@@ -390,15 +418,13 @@ extern "C" {
     pub fn YGNodeStyleGetDirection(node: YGNodeRef) -> YGDirection;
 }
 extern "C" {
-    pub fn YGNodeStyleSetFlexDirection(node: YGNodeRef,
-                                       flexDirection: YGFlexDirection);
+    pub fn YGNodeStyleSetFlexDirection(node: YGNodeRef, flexDirection: YGFlexDirection);
 }
 extern "C" {
     pub fn YGNodeStyleGetFlexDirection(node: YGNodeRef) -> YGFlexDirection;
 }
 extern "C" {
-    pub fn YGNodeStyleSetJustifyContent(node: YGNodeRef,
-                                        justifyContent: YGJustify);
+    pub fn YGNodeStyleSetJustifyContent(node: YGNodeRef, justifyContent: YGJustify);
 }
 extern "C" {
     pub fn YGNodeStyleGetJustifyContent(node: YGNodeRef) -> YGJustify;
@@ -422,8 +448,7 @@ extern "C" {
     pub fn YGNodeStyleGetAlignSelf(node: YGNodeRef) -> YGAlign;
 }
 extern "C" {
-    pub fn YGNodeStyleSetPositionType(node: YGNodeRef,
-                                      positionType: YGPositionType);
+    pub fn YGNodeStyleSetPositionType(node: YGNodeRef, positionType: YGPositionType);
 }
 extern "C" {
     pub fn YGNodeStyleGetPositionType(node: YGNodeRef) -> YGPositionType;
@@ -477,12 +502,10 @@ extern "C" {
     pub fn YGNodeStyleSetFlexBasisAuto(node: YGNodeRef);
 }
 extern "C" {
-    pub fn YGNodeStyleSetPosition(node: YGNodeRef, edge: YGEdge,
-                                  position: f32);
+    pub fn YGNodeStyleSetPosition(node: YGNodeRef, edge: YGEdge, position: f32);
 }
 extern "C" {
-    pub fn YGNodeStyleSetPositionPercent(node: YGNodeRef, edge: YGEdge,
-                                         position: f32);
+    pub fn YGNodeStyleSetPositionPercent(node: YGNodeRef, edge: YGEdge, position: f32);
 }
 extern "C" {
     pub fn YGNodeStyleGetPosition(node: YGNodeRef, edge: YGEdge) -> YGValue;
@@ -491,8 +514,7 @@ extern "C" {
     pub fn YGNodeStyleSetMargin(node: YGNodeRef, edge: YGEdge, margin: f32);
 }
 extern "C" {
-    pub fn YGNodeStyleSetMarginPercent(node: YGNodeRef, edge: YGEdge,
-                                       margin: f32);
+    pub fn YGNodeStyleSetMarginPercent(node: YGNodeRef, edge: YGEdge, margin: f32);
 }
 extern "C" {
     pub fn YGNodeStyleGetMargin(node: YGNodeRef, edge: YGEdge) -> YGValue;
@@ -504,8 +526,7 @@ extern "C" {
     pub fn YGNodeStyleSetPadding(node: YGNodeRef, edge: YGEdge, padding: f32);
 }
 extern "C" {
-    pub fn YGNodeStyleSetPaddingPercent(node: YGNodeRef, edge: YGEdge,
-                                        padding: f32);
+    pub fn YGNodeStyleSetPaddingPercent(node: YGNodeRef, edge: YGEdge, padding: f32);
 }
 extern "C" {
     pub fn YGNodeStyleGetPadding(node: YGNodeRef, edge: YGEdge) -> YGValue;
@@ -619,32 +640,41 @@ extern "C" {
     pub fn YGConfigSetLogger(config: YGConfigRef, logger: YGLogger);
 }
 extern "C" {
-    pub fn YGLog(node: YGNodeRef, level: YGLogLevel,
-                 message: *const ::std::os::raw::c_char, ...);
+    pub fn YGLog(node: YGNodeRef, level: YGLogLevel, message: *const ::std::os::raw::c_char, ...);
 }
 extern "C" {
-    pub fn YGLogWithConfig(config: YGConfigRef, level: YGLogLevel,
-                           format: *const ::std::os::raw::c_char, ...);
+    pub fn YGLogWithConfig(
+        config: YGConfigRef,
+        level: YGLogLevel,
+        format: *const ::std::os::raw::c_char,
+        ...
+    );
 }
 extern "C" {
     pub fn YGAssert(condition: bool, message: *const ::std::os::raw::c_char);
 }
 extern "C" {
-    pub fn YGAssertWithNode(node: YGNodeRef, condition: bool,
-                            message: *const ::std::os::raw::c_char);
+    pub fn YGAssertWithNode(
+        node: YGNodeRef,
+        condition: bool,
+        message: *const ::std::os::raw::c_char,
+    );
 }
 extern "C" {
-    pub fn YGAssertWithConfig(config: YGConfigRef, condition: bool,
-                              message: *const ::std::os::raw::c_char);
+    pub fn YGAssertWithConfig(
+        config: YGConfigRef,
+        condition: bool,
+        message: *const ::std::os::raw::c_char,
+    );
 }
 extern "C" {
-    pub fn YGConfigSetPointScaleFactor(config: YGConfigRef,
-                                       pixelsInPoint: f32);
+    pub fn YGConfigSetPointScaleFactor(config: YGConfigRef, pixelsInPoint: f32);
 }
 extern "C" {
-    pub fn YGConfigSetUseLegacyStretchBehaviour(config: YGConfigRef,
-                                                useLegacyStretchBehaviour:
-                                                    bool);
+    pub fn YGConfigSetUseLegacyStretchBehaviour(
+        config: YGConfigRef,
+        useLegacyStretchBehaviour: bool,
+    );
 }
 extern "C" {
     pub fn YGConfigNew() -> YGConfigRef;
@@ -659,16 +689,17 @@ extern "C" {
     pub fn YGConfigGetInstanceCount() -> i32;
 }
 extern "C" {
-    pub fn YGConfigSetExperimentalFeatureEnabled(config: YGConfigRef,
-                                                 feature:
-                                                     YGExperimentalFeature,
-                                                 enabled: bool);
+    pub fn YGConfigSetExperimentalFeatureEnabled(
+        config: YGConfigRef,
+        feature: YGExperimentalFeature,
+        enabled: bool,
+    );
 }
 extern "C" {
-    pub fn YGConfigIsExperimentalFeatureEnabled(config: YGConfigRef,
-                                                feature:
-                                                    YGExperimentalFeature)
-     -> bool;
+    pub fn YGConfigIsExperimentalFeatureEnabled(
+        config: YGConfigRef,
+        feature: YGExperimentalFeature,
+    ) -> bool;
 }
 extern "C" {
     pub fn YGConfigSetUseWebDefaults(config: YGConfigRef, enabled: bool);
@@ -677,23 +708,16 @@ extern "C" {
     pub fn YGConfigGetUseWebDefaults(config: YGConfigRef) -> bool;
 }
 extern "C" {
-    pub fn YGConfigSetNodeClonedFunc(config: YGConfigRef,
-                                     callback: YGNodeClonedFunc);
+    pub fn YGConfigSetNodeClonedFunc(config: YGConfigRef, callback: YGNodeClonedFunc);
 }
 extern "C" {
     pub fn YGConfigGetDefault() -> YGConfigRef;
 }
 extern "C" {
-    pub fn YGConfigSetContext(config: YGConfigRef,
-                              context: *mut ::std::os::raw::c_void);
+    pub fn YGConfigSetContext(config: YGConfigRef, context: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn YGConfigGetContext(config: YGConfigRef)
-     -> *mut ::std::os::raw::c_void;
-}
-extern "C" {
-    pub fn YGSetMemoryFuncs(ygmalloc: YGMalloc, yccalloc: YGCalloc,
-                            ygrealloc: YGRealloc, ygfree: YGFree);
+    pub fn YGConfigGetContext(config: YGConfigRef) -> *mut ::std::os::raw::c_void;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -714,12 +738,10 @@ extern "C" {
     pub fn YGNodeListAdd(listp: *mut YGNodeListRef, node: YGNodeRef);
 }
 extern "C" {
-    pub fn YGNodeListInsert(listp: *mut YGNodeListRef, node: YGNodeRef,
-                            index: u32);
+    pub fn YGNodeListInsert(listp: *mut YGNodeListRef, node: YGNodeRef, index: u32);
 }
 extern "C" {
-    pub fn YGNodeListReplace(list: YGNodeListRef, index: u32,
-                             newNode: YGNodeRef);
+    pub fn YGNodeListReplace(list: YGNodeListRef, index: u32, newNode: YGNodeRef);
 }
 extern "C" {
     pub fn YGNodeListRemoveAll(list: YGNodeListRef);
@@ -728,8 +750,7 @@ extern "C" {
     pub fn YGNodeListRemove(list: YGNodeListRef, index: u32) -> YGNodeRef;
 }
 extern "C" {
-    pub fn YGNodeListDelete(list: YGNodeListRef, node: YGNodeRef)
-     -> YGNodeRef;
+    pub fn YGNodeListDelete(list: YGNodeListRef, node: YGNodeRef) -> YGNodeRef;
 }
 extern "C" {
     pub fn YGNodeListGet(list: YGNodeListRef, index: u32) -> YGNodeRef;
@@ -737,8 +758,9 @@ extern "C" {
 extern "C" {
     pub fn YGNodeListClone(list: YGNodeListRef) -> YGNodeListRef;
 }
+pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct __va_list_tag {
     pub gp_offset: ::std::os::raw::c_uint,
     pub fp_offset: ::std::os::raw::c_uint,
@@ -747,32 +769,54 @@ pub struct __va_list_tag {
 }
 #[test]
 fn bindgen_test_layout___va_list_tag() {
-    assert_eq!(::std::mem::size_of::<__va_list_tag>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( __va_list_tag ) ));
-    assert_eq! (::std::mem::align_of::<__va_list_tag>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( __va_list_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const __va_list_tag ) ) . gp_offset as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( __va_list_tag ) , "::"
-                , stringify ! ( gp_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const __va_list_tag ) ) . fp_offset as * const
-                _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( __va_list_tag ) , "::"
-                , stringify ! ( fp_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const __va_list_tag ) ) . overflow_arg_area as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( __va_list_tag ) , "::"
-                , stringify ! ( overflow_arg_area ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const __va_list_tag ) ) . reg_save_area as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( __va_list_tag ) , "::"
-                , stringify ! ( reg_save_area ) ));
+    assert_eq!(
+        ::std::mem::size_of::<__va_list_tag>(),
+        24usize,
+        concat!("Size of: ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__va_list_tag>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const __va_list_tag)).gp_offset as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(gp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const __va_list_tag)).fp_offset as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(fp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const __va_list_tag)).overflow_arg_area as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(overflow_arg_area)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const __va_list_tag)).reg_save_area as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(reg_save_area)
+        )
+    );
 }
-impl Clone for __va_list_tag {
-    fn clone(&self) -> Self { *self }
-}
-pub type __builtin_va_list = [__va_list_tag; 1usize];
