@@ -1,4 +1,4 @@
-# yoga-sys
+# yoga-sys [![Build Status](https://travis-ci.org/Nemikolh/yoga-sys.svg?branch=master)](https://travis-ci.org/Nemikolh/yoga-sys)[![Build Status](https://ci.appveyor.com/api/projects/status/github/Nemikolh/yoga-sys?svg=true)](https://ci.appveyor.com/project/Nemikolh/yoga-sys)
 
 Raw rust bindings for yoga.
 
